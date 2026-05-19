@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.DS_Store
+
+data/raw/**/*.json
+data/normalized/**/*.json
+reports/**/*.json
+reports/**/*.md
+
+!data/raw/.gitkeep
+!data/normalized/.gitkeep
+!reports/.gitkeep

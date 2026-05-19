@@ -1,0 +1,36 @@
+{
+  "name": "drop-scout",
+  "version": "0.1.0",
+  "description": "CLI benchmark for CS2 digital-goods market timing from human trade data.",
+  "type": "module",
+  "bin": {
+    "dropscout": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "fetch": "tsx src/cli.ts fetch",
+    "normalize": "tsx src/cli.ts normalize",
+    "benchmark": "tsx src/cli.ts benchmark",
+    "report": "tsx src/cli.ts report"
+  },
+  "keywords": [
+    "cs2",
+    "benchmark",
+    "market-data",
+    "agentic-commerce"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.6"
+  }
+}
