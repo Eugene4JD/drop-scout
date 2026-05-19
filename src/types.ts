@@ -15,6 +15,7 @@ export interface RawArtifact<TPayload = unknown> {
     url: string;
     method: "GET";
     window?: DateWindow;
+    lookback?: string;
   };
   payloadHash: string;
   payload?: TPayload;

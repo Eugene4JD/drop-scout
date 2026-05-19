@@ -44,8 +44,10 @@ Set `CS2CAP_API_KEY` in `.env` if you want real historical candles.
 Fetch raw provider data:
 
 ```bash
-npm run dev -- fetch --start 2026-04-19 --end 2026-05-18
+npm run dev -- fetch --lookback 30d
 ```
+
+The default fetch uses `--lookback 30d` and sparse candles (`fill=false`) because CS2Cap free-tier keys reject custom `start`/`end` ranges and forward-filled candles. Paid-tier users can request custom ranges with `--start ... --end ...` and forward-filled candles with `--fill`.
 
 Normalize fetched candles:
 

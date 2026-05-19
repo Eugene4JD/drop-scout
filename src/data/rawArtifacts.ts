@@ -19,7 +19,11 @@ export async function saveRawArtifact<TPayload>(artifact: RawArtifact<TPayload>)
   const fileName = [
     slugify(artifact.item),
     artifact.kind,
-    artifact.request.window ? slugify(artifact.request.window.start.slice(0, 10)) : "live",
+    artifact.request.window
+      ? slugify(artifact.request.window.start.slice(0, 10))
+      : artifact.request.lookback
+        ? slugify(`lookback-${artifact.request.lookback}`)
+        : "live",
     artifact.request.window ? slugify(artifact.request.window.end.slice(0, 10)) : "now"
   ].join("-");
 

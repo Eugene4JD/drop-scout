@@ -23,19 +23,29 @@ program
 program
   .command("fetch")
   .description("Fetch raw CS2Cap historical data and Steam live sanity data.")
-  .option("--start <date>", "Start date, inclusive", "2026-04-19")
-  .option("--end <date>", "End date, inclusive", "2026-05-18")
+  .option("--start <date>", "Start date, inclusive. Paid CS2Cap tiers only when paired with --end.")
+  .option("--end <date>", "End date, inclusive. Paid CS2Cap tiers only when paired with --start.")
+  .option("--lookback <lookback>", "Lookback window for free-tier-compatible CS2Cap candles", "30d")
   .option("--items <items>", "Comma-separated item names, or 'cases' for the default basket", "cases")
   .option("--currency <currency>", "Quote currency", "USD")
   .option("--interval <interval>", "CS2Cap candle interval: 1d, 1h, or 5m", "1d")
+  .option("--fill", "Request forward-filled CS2Cap candles. Paid tiers only; default is sparse free-tier-compatible data.", false)
   .action(async (options) => {
     const items = parseItems(options.items);
-    const window = normalizeWindow(options.start, options.end);
+    const window =
+      options.start || options.end
+        ? normalizeWindow(requireOption(options.start, "--start"), requireOption(options.end, "--end"))
+        : undefined;
+    const lookback = window ? undefined : String(options.lookback);
     const apiKey = process.env.CS2CAP_API_KEY;
     const baseUrl = process.env.CS2CAP_BASE_URL;
     const interval = validateInterval(options.interval);
 
-    console.log(`Fetching ${items.length} item(s) from ${window.start} to ${window.end}`);
+    console.log(
+      window
+        ? `Fetching ${items.length} item(s) from ${window.start} to ${window.end}`
+        : `Fetching ${items.length} item(s) with lookback=${lookback}`
+    );
     if (!apiKey) {
       console.log("CS2CAP_API_KEY is missing. Historical fetches will be saved as explicit blocker artifacts.");
     }
@@ -47,8 +57,10 @@ program
         ...(await fetchCs2CapForItem({
           item,
           window,
+          lookback,
           currency: options.currency,
           interval,
+          fill: Boolean(options.fill),
           apiKey,
           baseUrl
         }))
@@ -126,4 +138,12 @@ function validatePriceScale(value: string): "minor" | "raw" {
   }
 
   throw new Error("--price-scale must be one of: minor, raw");
+}
+
+function requireOption(value: string | undefined, name: string): string {
+  if (!value) {
+    throw new Error(`${name} is required when either --start or --end is provided.`);
+  }
+
+  return value;
 }

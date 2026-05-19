@@ -18,6 +18,8 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
   const candles: MarketCandle[] = [];
   const issues: NormalizationIssue[] = [];
   let window: NormalizedMarketData["window"] = null;
+  const successfulCandleItems = new Set<string>();
+  const deferredIssues: NormalizationIssue[] = [];
 
   for (const file of rawFiles) {
     const artifact = await readJson<RawArtifact<Cs2CapCandlesPayload>>(file);
@@ -26,7 +28,7 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
     }
 
     if (!artifact.ok) {
-      issues.push({
+      deferredIssues.push({
         item: artifact.item,
         provider: artifact.provider,
         kind: artifact.kind,
@@ -40,7 +42,14 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
       continue;
     }
 
-    window = artifact.request.window ?? window;
+    window =
+      artifact.request.window ??
+      (artifact.payload?.meta?.start && artifact.payload?.meta?.end
+        ? {
+            start: new Date(artifact.payload.meta.start).toISOString(),
+            end: new Date(artifact.payload.meta.end).toISOString()
+          }
+        : window);
     const payload = artifact.payload;
     if (!Array.isArray(payload?.data) || payload.data.length === 0) {
       issues.push({
@@ -53,6 +62,7 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
       continue;
     }
 
+    successfulCandleItems.add(artifact.item);
     for (const candle of payload.data) {
       if (!isValidCandle(candle)) {
         issues.push({
@@ -86,6 +96,12 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
       });
     }
   }
+
+  issues.push(
+    ...deferredIssues.filter(
+      (issue) => !(issue.kind === "candles" && successfulCandleItems.has(issue.item))
+    )
+  );
 
   const normalized: NormalizedMarketData = {
     generatedAt: new Date().toISOString(),

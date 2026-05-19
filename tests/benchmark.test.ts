@@ -27,11 +27,11 @@ describe("buildHumanBenchmark", () => {
     expect(item.buyNow?.price).toBe(1);
     expect(item.averageHumanMarket?.method).toBe("ohlcv_vwap");
     expect(item.averageHumanMarket?.price).toBeCloseTo((1 * 100 + 0.8 * 200 + 0.9 * 300) / 600);
-    expect(item.bestHistorical?.price).toBe(0.6);
-    expect(item.worstHistorical?.price).toBe(1.2);
-    expect(item.timingOpportunityPct).toBeCloseTo(40);
+    expect(item.bestHistorical?.price).toBe(0.8);
+    expect(item.worstHistorical?.price).toBe(1);
+    expect(item.timingOpportunityPct).toBeCloseTo(20);
     expect(item.budget?.unitsAtBuyNow).toBe(5);
-    expect(item.budget?.unitsAtBestHindsight).toBe(8);
+    expect(item.budget?.unitsAtBestHindsight).toBe(6);
   });
 
   it("carries missing-data provider issues into the report", () => {

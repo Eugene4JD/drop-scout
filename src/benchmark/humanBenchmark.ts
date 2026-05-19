@@ -67,6 +67,7 @@ export function buildHumanBenchmark(
     },
     caveats: [
       "V1 contains no agent strategy. It only establishes data quality and human-market baselines.",
+      "Best and worst historical prices use daily closes to avoid treating provider-level intraday lows as executable consumer prices.",
       "Best and worst historical prices are hindsight-only and must not be presented as live-buy decisions.",
       "OHLCV-derived VWAP is a market approximation unless exact trade-level sales are available.",
       "CS2Cap candle money fields are normalized using the configured price scale from the normalize step."
@@ -96,11 +97,11 @@ function benchmarkItem(item: string, candles: MarketCandle[], options: Benchmark
     timestamp: first.timestamp
   };
   const best = {
-    ...minPricePoint(sorted, "low"),
+    ...minPricePoint(sorted, "close"),
     label: "hindsight_only" as const
   };
   const worst = {
-    ...maxPricePoint(sorted, "high"),
+    ...maxPricePoint(sorted, "close"),
     label: "hindsight_only" as const
   };
   const totalVolume = sorted.reduce((sum, candle) => sum + Math.max(0, candle.volume), 0);
