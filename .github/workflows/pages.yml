@@ -10,9 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 concurrency:
   group: github-pages
   cancel-in-progress: false
@@ -21,13 +18,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: apps/web/package-lock.json
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - run: npm ci
         working-directory: apps/web
       - run: npm run build
@@ -36,7 +33,7 @@ jobs:
           GITHUB_PAGES: "true"
       - run: touch out/.nojekyll
         working-directory: apps/web
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: apps/web/out
 
@@ -48,4 +45,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
