@@ -28,6 +28,28 @@ export interface RawArtifact<TPayload = unknown> {
   notes?: string[];
 }
 
+export interface RawRunManifest {
+  runId: string;
+  fetchedAt: string;
+  request: {
+    items: string[];
+    window?: DateWindow;
+    lookback?: string;
+    currency: string;
+    interval: "1d" | "1h" | "5m";
+    fill: boolean;
+  };
+  artifacts: RawRunManifestArtifact[];
+}
+
+export interface RawRunManifestArtifact {
+  path: string;
+  provider: ProviderName;
+  kind: RawArtifact["kind"];
+  item: string;
+  ok: boolean;
+}
+
 export interface Cs2CapCandle {
   t: number;
   o: number;
@@ -82,6 +104,10 @@ export interface NormalizedMarketData {
   generatedAt: string;
   window: DateWindow | null;
   priceScale: "minor" | "raw";
+  sourceManifest?: {
+    runId: string;
+    path: string;
+  };
   candles: MarketCandle[];
   issues: NormalizationIssue[];
 }
@@ -100,7 +126,8 @@ export interface ItemBenchmark {
   currency: string;
   candleCount: number;
   window: DateWindow | null;
-  buyNow?: PricePoint;
+  windowStart?: PricePoint;
+  buyNow?: never;
   averageHumanMarket?: {
     price: number;
     method: "ohlcv_vwap" | "mean_close";
@@ -119,7 +146,7 @@ export interface ItemBenchmark {
   liquidityTier?: "high" | "medium" | "low";
   budget?: {
     budgetUsd: number;
-    unitsAtBuyNow: number;
+    unitsAtWindowStart: number;
     unitsAtAverage: number;
     unitsAtBestHindsight: number;
   };

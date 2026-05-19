@@ -24,13 +24,14 @@ describe("buildHumanBenchmark", () => {
 
     expect(item.item).toBe("Kilowatt Case");
     expect(item.status).toBe("complete");
-    expect(item.buyNow?.price).toBe(1);
+    expect(item.windowStart?.price).toBe(1);
+    expect(item.buyNow).toBeUndefined();
     expect(item.averageHumanMarket?.method).toBe("ohlcv_vwap");
     expect(item.averageHumanMarket?.price).toBeCloseTo((1 * 100 + 0.8 * 200 + 0.9 * 300) / 600);
     expect(item.bestHistorical?.price).toBe(0.8);
     expect(item.worstHistorical?.price).toBe(1);
     expect(item.timingOpportunityPct).toBeCloseTo(20);
-    expect(item.budget?.unitsAtBuyNow).toBe(5);
+    expect(item.budget?.unitsAtWindowStart).toBe(5);
     expect(item.budget?.unitsAtBestHindsight).toBe(6);
   });
 
@@ -55,6 +56,27 @@ describe("buildHumanBenchmark", () => {
     expect(report.items).toHaveLength(1);
     expect(report.items[0].status).toBe("missing_data");
     expect(report.items[0].issues?.[0]).toContain("MISSING_CS2CAP_API_KEY");
+  });
+
+  it("keeps non-fatal provider issues visible for complete items", () => {
+    const report = buildHumanBenchmark(
+      {
+        ...fixture,
+        issues: [
+          {
+            item: "Kilowatt Case",
+            provider: "cs2cap",
+            kind: "sales",
+            code: "CS2CAP_HTTP_403",
+            message: "CS2Cap returned HTTP 403."
+          }
+        ]
+      },
+      { budgetUsd: 5 }
+    );
+
+    expect(report.items[0].status).toBe("complete");
+    expect(report.items[0].issues).toEqual(["CS2CAP_HTTP_403: CS2Cap returned HTTP 403."]);
   });
 });
 

@@ -11,7 +11,7 @@ export function renderMarkdownReport(report: HumanBenchmarkReport): string {
     "",
     report.dataMeaning,
     "",
-    "V1 is intentionally only data gathering and human-market benchmarking. It does not contain an agent strategy, X402, Gemini, or a web app.",
+    "Human benchmark reports do not contain agent decisions. Gemini paper-trading output is generated separately by the agent benchmark command.",
     "",
     "## Summary",
     "",
@@ -40,7 +40,7 @@ export function renderMarkdownReport(report: HumanBenchmarkReport): string {
     "",
     "## Item Benchmarks",
     "",
-    "| Item | Status | Buy Now | Avg Human Market | Best Hindsight | Worst Hindsight | Timing Opportunity | Volume | Liquidity |",
+    "| Item | Status | Window Start | Avg Human Market | Best Hindsight | Worst Hindsight | Timing Opportunity | Volume | Liquidity |",
     "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |"
   );
 
@@ -49,7 +49,7 @@ export function renderMarkdownReport(report: HumanBenchmarkReport): string {
       [
         item.item,
         item.status,
-        formatUsd(item.buyNow?.price),
+        formatUsd(item.windowStart?.price),
         formatUsd(item.averageHumanMarket?.price),
         formatUsd(item.bestHistorical?.price),
         formatUsd(item.worstHistorical?.price),

@@ -1,10 +1,16 @@
 node_modules/
 dist/
+apps/web/.next/
+apps/web/.vercel/
+.playwright-mcp/
+*.tsbuildinfo
+outputs/
 .env
 .DS_Store
 
 data/raw/**/*.json
 data/normalized/**/*.json
+data/agent-cache/**/*.json
 reports/**/*.json
 reports/**/*.md
 

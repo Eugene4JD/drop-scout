@@ -1,8 +1,8 @@
 import { join } from "node:path";
-import type { RawArtifact } from "../types.js";
+import type { RawArtifact, RawRunManifest, RawRunManifestArtifact } from "../types.js";
 import { writeJson } from "../utils/fs.js";
 import { sha256 } from "../utils/hash.js";
-import { RAW_DIR } from "../paths.js";
+import { LATEST_RAW_RUN_PATH, RAW_DIR, RAW_RUNS_DIR } from "../paths.js";
 import { slugify } from "../utils/fs.js";
 
 export function buildArtifact<TPayload>(
@@ -29,5 +29,22 @@ export async function saveRawArtifact<TPayload>(artifact: RawArtifact<TPayload>)
 
   const path = join(RAW_DIR, artifact.provider, `${fileName}.json`);
   await writeJson(path, artifact);
+  return path;
+}
+
+export function manifestEntryForArtifact(path: string, artifact: RawArtifact): RawRunManifestArtifact {
+  return {
+    path,
+    provider: artifact.provider,
+    kind: artifact.kind,
+    item: artifact.item,
+    ok: artifact.ok
+  };
+}
+
+export async function saveRawRunManifest(manifest: RawRunManifest): Promise<string> {
+  const path = join(RAW_RUNS_DIR, `${slugify(manifest.runId)}.json`);
+  await writeJson(path, manifest);
+  await writeJson(LATEST_RAW_RUN_PATH, manifest);
   return path;
 }

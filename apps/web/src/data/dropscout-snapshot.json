@@ -1,0 +1,1743 @@
+{
+  "generatedAt": "2026-05-19T14:26:04.978Z",
+  "schemaVersion": 1,
+  "source": "dropscout_cli_export",
+  "items": [
+    {
+      "id": "dreams-and-nightmares-case",
+      "name": "Dreams & Nightmares Case",
+      "ticker": "DNC",
+      "tone": "#56579a",
+      "status": "complete",
+      "currency": "USD",
+      "candleCount": 30,
+      "window": {
+        "start": "2026-04-19T00:00:00.000Z",
+        "end": "2026-05-18T00:00:00.000Z"
+      },
+      "humanMarketPrice": 1.1791317588118433,
+      "bestHistoricalPrice": 1,
+      "worstHistoricalPrice": 1.78,
+      "candles": [
+        {
+          "timestamp": "2026-04-19T00:00:00.000Z",
+          "close": 1.76,
+          "volume": 156459
+        },
+        {
+          "timestamp": "2026-04-20T00:00:00.000Z",
+          "close": 1.57,
+          "volume": 129135
+        },
+        {
+          "timestamp": "2026-04-21T00:00:00.000Z",
+          "close": 1.78,
+          "volume": 128064
+        },
+        {
+          "timestamp": "2026-04-22T00:00:00.000Z",
+          "close": 1.55,
+          "volume": 174203
+        },
+        {
+          "timestamp": "2026-04-23T00:00:00.000Z",
+          "close": 1.31,
+          "volume": 258203
+        },
+        {
+          "timestamp": "2026-04-24T00:00:00.000Z",
+          "close": 1.31,
+          "volume": 309444
+        },
+        {
+          "timestamp": "2026-04-25T00:00:00.000Z",
+          "close": 1.37,
+          "volume": 186643
+        },
+        {
+          "timestamp": "2026-04-26T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 191471
+        },
+        {
+          "timestamp": "2026-04-27T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 246905
+        },
+        {
+          "timestamp": "2026-04-28T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 339591
+        },
+        {
+          "timestamp": "2026-04-29T00:00:00.000Z",
+          "close": 1.16,
+          "volume": 305546
+        },
+        {
+          "timestamp": "2026-04-30T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 554773
+        },
+        {
+          "timestamp": "2026-05-01T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 144698
+        },
+        {
+          "timestamp": "2026-05-02T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 244549
+        },
+        {
+          "timestamp": "2026-05-03T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 264256
+        },
+        {
+          "timestamp": "2026-05-04T00:00:00.000Z",
+          "close": 1.07,
+          "volume": 268635
+        },
+        {
+          "timestamp": "2026-05-05T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 386122
+        },
+        {
+          "timestamp": "2026-05-06T00:00:00.000Z",
+          "close": 1,
+          "volume": 318635
+        },
+        {
+          "timestamp": "2026-05-07T00:00:00.000Z",
+          "close": 1,
+          "volume": 235427
+        },
+        {
+          "timestamp": "2026-05-08T00:00:00.000Z",
+          "close": 1.22,
+          "volume": 320379
+        },
+        {
+          "timestamp": "2026-05-09T00:00:00.000Z",
+          "close": 1,
+          "volume": 332148
+        },
+        {
+          "timestamp": "2026-05-10T00:00:00.000Z",
+          "close": 1,
+          "volume": 152498
+        },
+        {
+          "timestamp": "2026-05-11T00:00:00.000Z",
+          "close": 1,
+          "volume": 201973
+        },
+        {
+          "timestamp": "2026-05-12T00:00:00.000Z",
+          "close": 1,
+          "volume": 202476
+        },
+        {
+          "timestamp": "2026-05-13T00:00:00.000Z",
+          "close": 1,
+          "volume": 179793
+        },
+        {
+          "timestamp": "2026-05-14T00:00:00.000Z",
+          "close": 1,
+          "volume": 198998
+        },
+        {
+          "timestamp": "2026-05-15T00:00:00.000Z",
+          "close": 1,
+          "volume": 192589
+        },
+        {
+          "timestamp": "2026-05-16T00:00:00.000Z",
+          "close": 1,
+          "volume": 207041
+        },
+        {
+          "timestamp": "2026-05-17T00:00:00.000Z",
+          "close": 1,
+          "volume": 208878
+        },
+        {
+          "timestamp": "2026-05-18T00:00:00.000Z",
+          "close": 1,
+          "volume": 180524
+        }
+      ],
+      "issues": [
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403."
+      ]
+    },
+    {
+      "id": "fever-case",
+      "name": "Fever Case",
+      "ticker": "FVR",
+      "tone": "#b94a6a",
+      "status": "complete",
+      "currency": "USD",
+      "candleCount": 30,
+      "window": {
+        "start": "2026-04-19T00:00:00.000Z",
+        "end": "2026-05-18T00:00:00.000Z"
+      },
+      "humanMarketPrice": 0.5803837191309975,
+      "bestHistoricalPrice": 0.49,
+      "worstHistoricalPrice": 0.74,
+      "candles": [
+        {
+          "timestamp": "2026-04-19T00:00:00.000Z",
+          "close": 0.74,
+          "volume": 238997
+        },
+        {
+          "timestamp": "2026-04-20T00:00:00.000Z",
+          "close": 0.74,
+          "volume": 256453
+        },
+        {
+          "timestamp": "2026-04-21T00:00:00.000Z",
+          "close": 0.66,
+          "volume": 211823
+        },
+        {
+          "timestamp": "2026-04-22T00:00:00.000Z",
+          "close": 0.63,
+          "volume": 251100
+        },
+        {
+          "timestamp": "2026-04-23T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 525866
+        },
+        {
+          "timestamp": "2026-04-24T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 758550
+        },
+        {
+          "timestamp": "2026-04-25T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 607755
+        },
+        {
+          "timestamp": "2026-04-26T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 297151
+        },
+        {
+          "timestamp": "2026-04-27T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 241040
+        },
+        {
+          "timestamp": "2026-04-28T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 522959
+        },
+        {
+          "timestamp": "2026-04-29T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 359561
+        },
+        {
+          "timestamp": "2026-04-30T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 505313
+        },
+        {
+          "timestamp": "2026-05-01T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 300850
+        },
+        {
+          "timestamp": "2026-05-02T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 328522
+        },
+        {
+          "timestamp": "2026-05-03T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 334665
+        },
+        {
+          "timestamp": "2026-05-04T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 513991
+        },
+        {
+          "timestamp": "2026-05-05T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 479725
+        },
+        {
+          "timestamp": "2026-05-06T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 396616
+        },
+        {
+          "timestamp": "2026-05-07T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 481416
+        },
+        {
+          "timestamp": "2026-05-08T00:00:00.000Z",
+          "close": 0.55,
+          "volume": 352072
+        },
+        {
+          "timestamp": "2026-05-09T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 221411
+        },
+        {
+          "timestamp": "2026-05-10T00:00:00.000Z",
+          "close": 0.56,
+          "volume": 273945
+        },
+        {
+          "timestamp": "2026-05-11T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 182217
+        },
+        {
+          "timestamp": "2026-05-12T00:00:00.000Z",
+          "close": 0.56,
+          "volume": 267573
+        },
+        {
+          "timestamp": "2026-05-13T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 188408
+        },
+        {
+          "timestamp": "2026-05-14T00:00:00.000Z",
+          "close": 0.49,
+          "volume": 283370
+        },
+        {
+          "timestamp": "2026-05-15T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 250059
+        },
+        {
+          "timestamp": "2026-05-16T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 334786
+        },
+        {
+          "timestamp": "2026-05-17T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 330060
+        },
+        {
+          "timestamp": "2026-05-18T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 302566
+        }
+      ],
+      "issues": [
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403."
+      ]
+    },
+    {
+      "id": "fracture-case",
+      "name": "Fracture Case",
+      "ticker": "FRC",
+      "tone": "#4f8a55",
+      "status": "complete",
+      "currency": "USD",
+      "candleCount": 30,
+      "window": {
+        "start": "2026-04-19T00:00:00.000Z",
+        "end": "2026-05-18T00:00:00.000Z"
+      },
+      "humanMarketPrice": 0.5307218305731265,
+      "bestHistoricalPrice": 0.44,
+      "worstHistoricalPrice": 0.65,
+      "candles": [
+        {
+          "timestamp": "2026-04-19T00:00:00.000Z",
+          "close": 0.63,
+          "volume": 57090
+        },
+        {
+          "timestamp": "2026-04-20T00:00:00.000Z",
+          "close": 0.65,
+          "volume": 47304
+        },
+        {
+          "timestamp": "2026-04-21T00:00:00.000Z",
+          "close": 0.63,
+          "volume": 45051
+        },
+        {
+          "timestamp": "2026-04-22T00:00:00.000Z",
+          "close": 0.61,
+          "volume": 48859
+        },
+        {
+          "timestamp": "2026-04-23T00:00:00.000Z",
+          "close": 0.56,
+          "volume": 80426
+        },
+        {
+          "timestamp": "2026-04-24T00:00:00.000Z",
+          "close": 0.57,
+          "volume": 159609
+        },
+        {
+          "timestamp": "2026-04-25T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 180715
+        },
+        {
+          "timestamp": "2026-04-26T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 118637
+        },
+        {
+          "timestamp": "2026-04-27T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 132721
+        },
+        {
+          "timestamp": "2026-04-28T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 124998
+        },
+        {
+          "timestamp": "2026-04-29T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 88086
+        },
+        {
+          "timestamp": "2026-04-30T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 75465
+        },
+        {
+          "timestamp": "2026-05-01T00:00:00.000Z",
+          "close": 0.44,
+          "volume": 110086
+        },
+        {
+          "timestamp": "2026-05-02T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 100899
+        },
+        {
+          "timestamp": "2026-05-03T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 75224
+        },
+        {
+          "timestamp": "2026-05-04T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 105235
+        },
+        {
+          "timestamp": "2026-05-05T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 72579
+        },
+        {
+          "timestamp": "2026-05-06T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 108118
+        },
+        {
+          "timestamp": "2026-05-07T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 122396
+        },
+        {
+          "timestamp": "2026-05-08T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 102423
+        },
+        {
+          "timestamp": "2026-05-09T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 55618
+        },
+        {
+          "timestamp": "2026-05-10T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 59535
+        },
+        {
+          "timestamp": "2026-05-11T00:00:00.000Z",
+          "close": 0.51,
+          "volume": 79849
+        },
+        {
+          "timestamp": "2026-05-12T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 71280
+        },
+        {
+          "timestamp": "2026-05-13T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 74739
+        },
+        {
+          "timestamp": "2026-05-14T00:00:00.000Z",
+          "close": 0.45,
+          "volume": 83906
+        },
+        {
+          "timestamp": "2026-05-15T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 78226
+        },
+        {
+          "timestamp": "2026-05-16T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 40093
+        },
+        {
+          "timestamp": "2026-05-17T00:00:00.000Z",
+          "close": 0.51,
+          "volume": 44920
+        },
+        {
+          "timestamp": "2026-05-18T00:00:00.000Z",
+          "close": 0.52,
+          "volume": 57590
+        }
+      ],
+      "issues": [
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403."
+      ]
+    },
+    {
+      "id": "kilowatt-case",
+      "name": "Kilowatt Case",
+      "ticker": "KWT",
+      "tone": "#3b7a8a",
+      "status": "complete",
+      "currency": "USD",
+      "candleCount": 30,
+      "window": {
+        "start": "2026-04-19T00:00:00.000Z",
+        "end": "2026-05-18T00:00:00.000Z"
+      },
+      "humanMarketPrice": 0.20825777873946452,
+      "bestHistoricalPrice": 0.14,
+      "worstHistoricalPrice": 0.35,
+      "candles": [
+        {
+          "timestamp": "2026-04-19T00:00:00.000Z",
+          "close": 0.29,
+          "volume": 161906
+        },
+        {
+          "timestamp": "2026-04-20T00:00:00.000Z",
+          "close": 0.29,
+          "volume": 130463
+        },
+        {
+          "timestamp": "2026-04-21T00:00:00.000Z",
+          "close": 0.28,
+          "volume": 117711
+        },
+        {
+          "timestamp": "2026-04-22T00:00:00.000Z",
+          "close": 0.35,
+          "volume": 156252
+        },
+        {
+          "timestamp": "2026-04-23T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 233018
+        },
+        {
+          "timestamp": "2026-04-24T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 372415
+        },
+        {
+          "timestamp": "2026-04-25T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 391516
+        },
+        {
+          "timestamp": "2026-04-26T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 253236
+        },
+        {
+          "timestamp": "2026-04-27T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 347440
+        },
+        {
+          "timestamp": "2026-04-28T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 345244
+        },
+        {
+          "timestamp": "2026-04-29T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 338742
+        },
+        {
+          "timestamp": "2026-04-30T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 288195
+        },
+        {
+          "timestamp": "2026-05-01T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 315797
+        },
+        {
+          "timestamp": "2026-05-02T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 452547
+        },
+        {
+          "timestamp": "2026-05-03T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 369142
+        },
+        {
+          "timestamp": "2026-05-04T00:00:00.000Z",
+          "close": 0.15,
+          "volume": 323681
+        },
+        {
+          "timestamp": "2026-05-05T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 233296
+        },
+        {
+          "timestamp": "2026-05-06T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 203482
+        },
+        {
+          "timestamp": "2026-05-07T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 170973
+        },
+        {
+          "timestamp": "2026-05-08T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 190164
+        },
+        {
+          "timestamp": "2026-05-09T00:00:00.000Z",
+          "close": 0.19,
+          "volume": 238002
+        },
+        {
+          "timestamp": "2026-05-10T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 236735
+        },
+        {
+          "timestamp": "2026-05-11T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 165121
+        },
+        {
+          "timestamp": "2026-05-12T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 176424
+        },
+        {
+          "timestamp": "2026-05-13T00:00:00.000Z",
+          "close": 0.14,
+          "volume": 139236
+        },
+        {
+          "timestamp": "2026-05-14T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 179290
+        },
+        {
+          "timestamp": "2026-05-15T00:00:00.000Z",
+          "close": 0.14,
+          "volume": 141845
+        },
+        {
+          "timestamp": "2026-05-16T00:00:00.000Z",
+          "close": 0.19,
+          "volume": 167787
+        },
+        {
+          "timestamp": "2026-05-17T00:00:00.000Z",
+          "close": 0.19,
+          "volume": 153817
+        },
+        {
+          "timestamp": "2026-05-18T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 216078
+        }
+      ],
+      "issues": [
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403."
+      ]
+    },
+    {
+      "id": "recoil-case",
+      "name": "Recoil Case",
+      "ticker": "RCL",
+      "tone": "#7a6b9a",
+      "status": "complete",
+      "currency": "USD",
+      "candleCount": 30,
+      "window": {
+        "start": "2026-04-19T00:00:00.000Z",
+        "end": "2026-05-18T00:00:00.000Z"
+      },
+      "humanMarketPrice": 0.2750483698441528,
+      "bestHistoricalPrice": 0.15,
+      "worstHistoricalPrice": 0.58,
+      "candles": [
+        {
+          "timestamp": "2026-04-19T00:00:00.000Z",
+          "close": 0.45,
+          "volume": 85768
+        },
+        {
+          "timestamp": "2026-04-20T00:00:00.000Z",
+          "close": 0.44,
+          "volume": 73753
+        },
+        {
+          "timestamp": "2026-04-21T00:00:00.000Z",
+          "close": 0.45,
+          "volume": 74400
+        },
+        {
+          "timestamp": "2026-04-22T00:00:00.000Z",
+          "close": 0.58,
+          "volume": 82550
+        },
+        {
+          "timestamp": "2026-04-23T00:00:00.000Z",
+          "close": 0.38,
+          "volume": 275696
+        },
+        {
+          "timestamp": "2026-04-24T00:00:00.000Z",
+          "close": 0.38,
+          "volume": 290512
+        },
+        {
+          "timestamp": "2026-04-25T00:00:00.000Z",
+          "close": 0.39,
+          "volume": 200011
+        },
+        {
+          "timestamp": "2026-04-26T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 128164
+        },
+        {
+          "timestamp": "2026-04-27T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 140970
+        },
+        {
+          "timestamp": "2026-04-28T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 197935
+        },
+        {
+          "timestamp": "2026-04-29T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 158338
+        },
+        {
+          "timestamp": "2026-04-30T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 181005
+        },
+        {
+          "timestamp": "2026-05-01T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 102027
+        },
+        {
+          "timestamp": "2026-05-02T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 126475
+        },
+        {
+          "timestamp": "2026-05-03T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 102749
+        },
+        {
+          "timestamp": "2026-05-04T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 135566
+        },
+        {
+          "timestamp": "2026-05-05T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 103201
+        },
+        {
+          "timestamp": "2026-05-06T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 144076
+        },
+        {
+          "timestamp": "2026-05-07T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 170346
+        },
+        {
+          "timestamp": "2026-05-08T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 104983
+        },
+        {
+          "timestamp": "2026-05-09T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 82287
+        },
+        {
+          "timestamp": "2026-05-10T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 93293
+        },
+        {
+          "timestamp": "2026-05-11T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 92863
+        },
+        {
+          "timestamp": "2026-05-12T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 74459
+        },
+        {
+          "timestamp": "2026-05-13T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 62717
+        },
+        {
+          "timestamp": "2026-05-14T00:00:00.000Z",
+          "close": 0.15,
+          "volume": 64776
+        },
+        {
+          "timestamp": "2026-05-15T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 61140
+        },
+        {
+          "timestamp": "2026-05-16T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 95279
+        },
+        {
+          "timestamp": "2026-05-17T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 74901
+        },
+        {
+          "timestamp": "2026-05-18T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 78858
+        }
+      ],
+      "issues": [
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403."
+      ]
+    },
+    {
+      "id": "revolution-case",
+      "name": "Revolution Case",
+      "ticker": "RVT",
+      "tone": "#a85a2a",
+      "status": "complete",
+      "currency": "USD",
+      "candleCount": 30,
+      "window": {
+        "start": "2026-04-19T00:00:00.000Z",
+        "end": "2026-05-18T00:00:00.000Z"
+      },
+      "humanMarketPrice": 0.26975908966908335,
+      "bestHistoricalPrice": 0.2,
+      "worstHistoricalPrice": 0.38,
+      "candles": [
+        {
+          "timestamp": "2026-04-19T00:00:00.000Z",
+          "close": 0.38,
+          "volume": 140822
+        },
+        {
+          "timestamp": "2026-04-20T00:00:00.000Z",
+          "close": 0.37,
+          "volume": 114312
+        },
+        {
+          "timestamp": "2026-04-21T00:00:00.000Z",
+          "close": 0.37,
+          "volume": 115252
+        },
+        {
+          "timestamp": "2026-04-22T00:00:00.000Z",
+          "close": 0.36,
+          "volume": 152076
+        },
+        {
+          "timestamp": "2026-04-23T00:00:00.000Z",
+          "close": 0.28,
+          "volume": 177070
+        },
+        {
+          "timestamp": "2026-04-24T00:00:00.000Z",
+          "close": 0.28,
+          "volume": 217172
+        },
+        {
+          "timestamp": "2026-04-25T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 264364
+        },
+        {
+          "timestamp": "2026-04-26T00:00:00.000Z",
+          "close": 0.28,
+          "volume": 198084
+        },
+        {
+          "timestamp": "2026-04-27T00:00:00.000Z",
+          "close": 0.28,
+          "volume": 233973
+        },
+        {
+          "timestamp": "2026-04-28T00:00:00.000Z",
+          "close": 0.28,
+          "volume": 277195
+        },
+        {
+          "timestamp": "2026-04-29T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 214365
+        },
+        {
+          "timestamp": "2026-04-30T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 198074
+        },
+        {
+          "timestamp": "2026-05-01T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 162156
+        },
+        {
+          "timestamp": "2026-05-02T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 269230
+        },
+        {
+          "timestamp": "2026-05-03T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 387353
+        },
+        {
+          "timestamp": "2026-05-04T00:00:00.000Z",
+          "close": 0.23,
+          "volume": 302906
+        },
+        {
+          "timestamp": "2026-05-05T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 176025
+        },
+        {
+          "timestamp": "2026-05-06T00:00:00.000Z",
+          "close": 0.26,
+          "volume": 215035
+        },
+        {
+          "timestamp": "2026-05-07T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 223177
+        },
+        {
+          "timestamp": "2026-05-08T00:00:00.000Z",
+          "close": 0.21,
+          "volume": 215687
+        },
+        {
+          "timestamp": "2026-05-09T00:00:00.000Z",
+          "close": 0.26,
+          "volume": 257485
+        },
+        {
+          "timestamp": "2026-05-10T00:00:00.000Z",
+          "close": 0.27,
+          "volume": 261662
+        },
+        {
+          "timestamp": "2026-05-11T00:00:00.000Z",
+          "close": 0.22,
+          "volume": 227552
+        },
+        {
+          "timestamp": "2026-05-12T00:00:00.000Z",
+          "close": 0.26,
+          "volume": 174626
+        },
+        {
+          "timestamp": "2026-05-13T00:00:00.000Z",
+          "close": 0.2,
+          "volume": 144461
+        },
+        {
+          "timestamp": "2026-05-14T00:00:00.000Z",
+          "close": 0.24,
+          "volume": 128121
+        },
+        {
+          "timestamp": "2026-05-15T00:00:00.000Z",
+          "close": 0.26,
+          "volume": 145780
+        },
+        {
+          "timestamp": "2026-05-16T00:00:00.000Z",
+          "close": 0.25,
+          "volume": 176214
+        },
+        {
+          "timestamp": "2026-05-17T00:00:00.000Z",
+          "close": 0.26,
+          "volume": 142980
+        },
+        {
+          "timestamp": "2026-05-18T00:00:00.000Z",
+          "close": 0.26,
+          "volume": 135141
+        }
+      ],
+      "issues": [
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403.",
+        "CS2CAP_HTTP_403: CS2Cap returned HTTP 403."
+      ]
+    }
+  ],
+  "models": [
+    {
+      "slug": "gemini-3.1-pro-preview",
+      "vendor": "google",
+      "status": "complete",
+      "rankable": true,
+      "generatedAt": "2026-05-19T14:26:04.978Z",
+      "costUsd": 0.038,
+      "totalSpend": 2.6659330309693536,
+      "savingsPct": 12.4,
+      "efficiencyPct": 60.54355429087814,
+      "decisions": [
+        {
+          "itemId": "dreams-and-nightmares-case",
+          "itemName": "Dreams & Nightmares Case",
+          "action": "buy",
+          "price": 1.073,
+          "executedAt": "2026-04-27T00:00:00.000Z",
+          "dayIndex": 8,
+          "deltaPct": 9,
+          "confidence": 0.827,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fever-case",
+          "itemName": "Fever Case",
+          "action": "buy",
+          "price": 0.524,
+          "executedAt": "2026-04-30T00:00:00.000Z",
+          "dayIndex": 11,
+          "deltaPct": 9.7,
+          "confidence": 0.827,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fracture-case",
+          "itemName": "Fracture Case",
+          "action": "buy",
+          "price": 0.471,
+          "executedAt": "2026-05-03T00:00:00.000Z",
+          "dayIndex": 14,
+          "deltaPct": 11.2,
+          "confidence": 0.827,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "kilowatt-case",
+          "itemName": "Kilowatt Case",
+          "action": "buy",
+          "price": 0.162,
+          "executedAt": "2026-05-06T00:00:00.000Z",
+          "dayIndex": 17,
+          "deltaPct": 22.4,
+          "confidence": 0.827,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "recoil-case",
+          "itemName": "Recoil Case",
+          "action": "buy",
+          "price": 0.186,
+          "executedAt": "2026-05-09T00:00:00.000Z",
+          "dayIndex": 20,
+          "deltaPct": 32.3,
+          "confidence": 0.827,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "revolution-case",
+          "itemName": "Revolution Case",
+          "action": "buy",
+          "price": 0.218,
+          "executedAt": "2026-05-12T00:00:00.000Z",
+          "dayIndex": 23,
+          "deltaPct": 19.1,
+          "confidence": 0.827,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        }
+      ],
+      "issues": [],
+      "runCommand": "node scripts/recording-cli-demo.mjs # visual mock for gemini-3.1-pro-preview"
+    },
+    {
+      "slug": "gemini-3-flash-preview",
+      "vendor": "google",
+      "status": "complete",
+      "rankable": true,
+      "generatedAt": "2026-05-19T14:26:04.978Z",
+      "costUsd": 0.009,
+      "totalSpend": 2.796795040480406,
+      "savingsPct": 8.1,
+      "efficiencyPct": 39.54861207710588,
+      "decisions": [
+        {
+          "itemId": "dreams-and-nightmares-case",
+          "itemName": "Dreams & Nightmares Case",
+          "action": "buy",
+          "price": 1.109,
+          "executedAt": "2026-04-27T00:00:00.000Z",
+          "dayIndex": 8,
+          "deltaPct": 5.9,
+          "confidence": 0.755,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fever-case",
+          "itemName": "Fever Case",
+          "action": "buy",
+          "price": 0.544,
+          "executedAt": "2026-04-30T00:00:00.000Z",
+          "dayIndex": 11,
+          "deltaPct": 6.3,
+          "confidence": 0.755,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fracture-case",
+          "itemName": "Fracture Case",
+          "action": "buy",
+          "price": 0.492,
+          "executedAt": "2026-05-03T00:00:00.000Z",
+          "dayIndex": 14,
+          "deltaPct": 7.3,
+          "confidence": 0.755,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "kilowatt-case",
+          "itemName": "Kilowatt Case",
+          "action": "buy",
+          "price": 0.178,
+          "executedAt": "2026-05-06T00:00:00.000Z",
+          "dayIndex": 17,
+          "deltaPct": 14.6,
+          "confidence": 0.755,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "recoil-case",
+          "itemName": "Recoil Case",
+          "action": "buy",
+          "price": 0.217,
+          "executedAt": "2026-05-09T00:00:00.000Z",
+          "dayIndex": 20,
+          "deltaPct": 21.1,
+          "confidence": 0.755,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "revolution-case",
+          "itemName": "Revolution Case",
+          "action": "buy",
+          "price": 0.236,
+          "executedAt": "2026-05-12T00:00:00.000Z",
+          "dayIndex": 23,
+          "deltaPct": 12.5,
+          "confidence": 0.755,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        }
+      ],
+      "issues": [],
+      "runCommand": "node scripts/recording-cli-demo.mjs # visual mock for gemini-3-flash-preview"
+    },
+    {
+      "slug": "gemini-2.5-pro",
+      "vendor": "google",
+      "status": "complete",
+      "rankable": true,
+      "generatedAt": "2026-05-19T14:26:04.978Z",
+      "costUsd": 0.021,
+      "totalSpend": 2.8728776041496227,
+      "savingsPct": 5.6,
+      "efficiencyPct": 27.34225032491271,
+      "decisions": [
+        {
+          "itemId": "dreams-and-nightmares-case",
+          "itemName": "Dreams & Nightmares Case",
+          "action": "buy",
+          "price": 1.131,
+          "executedAt": "2026-04-27T00:00:00.000Z",
+          "dayIndex": 8,
+          "deltaPct": 4.1,
+          "confidence": 0.713,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fever-case",
+          "itemName": "Fever Case",
+          "action": "buy",
+          "price": 0.555,
+          "executedAt": "2026-04-30T00:00:00.000Z",
+          "dayIndex": 11,
+          "deltaPct": 4.4,
+          "confidence": 0.713,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fracture-case",
+          "itemName": "Fracture Case",
+          "action": "buy",
+          "price": 0.504,
+          "executedAt": "2026-05-03T00:00:00.000Z",
+          "dayIndex": 14,
+          "deltaPct": 5,
+          "confidence": 0.713,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "kilowatt-case",
+          "itemName": "Kilowatt Case",
+          "action": "buy",
+          "price": 0.187,
+          "executedAt": "2026-05-06T00:00:00.000Z",
+          "dayIndex": 17,
+          "deltaPct": 10.1,
+          "confidence": 0.713,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "recoil-case",
+          "itemName": "Recoil Case",
+          "action": "buy",
+          "price": 0.235,
+          "executedAt": "2026-05-09T00:00:00.000Z",
+          "dayIndex": 20,
+          "deltaPct": 14.6,
+          "confidence": 0.713,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "revolution-case",
+          "itemName": "Revolution Case",
+          "action": "buy",
+          "price": 0.246,
+          "executedAt": "2026-05-12T00:00:00.000Z",
+          "dayIndex": 23,
+          "deltaPct": 8.6,
+          "confidence": 0.713,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        }
+      ],
+      "issues": [],
+      "runCommand": "node scripts/recording-cli-demo.mjs # visual mock for gemini-2.5-pro"
+    },
+    {
+      "slug": "gemini-2.5-flash",
+      "vendor": "google",
+      "status": "complete",
+      "rankable": true,
+      "generatedAt": "2026-05-19T14:26:04.978Z",
+      "costUsd": 0.006,
+      "totalSpend": 2.9580900754591455,
+      "savingsPct": 2.8,
+      "efficiencyPct": 13.671125162456354,
+      "decisions": [
+        {
+          "itemId": "dreams-and-nightmares-case",
+          "itemName": "Dreams & Nightmares Case",
+          "action": "buy",
+          "price": 1.155,
+          "executedAt": "2026-04-27T00:00:00.000Z",
+          "dayIndex": 8,
+          "deltaPct": 2,
+          "confidence": 0.667,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fever-case",
+          "itemName": "Fever Case",
+          "action": "buy",
+          "price": 0.568,
+          "executedAt": "2026-04-30T00:00:00.000Z",
+          "dayIndex": 11,
+          "deltaPct": 2.2,
+          "confidence": 0.667,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fracture-case",
+          "itemName": "Fracture Case",
+          "action": "buy",
+          "price": 0.517,
+          "executedAt": "2026-05-03T00:00:00.000Z",
+          "dayIndex": 14,
+          "deltaPct": 2.5,
+          "confidence": 0.667,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "kilowatt-case",
+          "itemName": "Kilowatt Case",
+          "action": "buy",
+          "price": 0.198,
+          "executedAt": "2026-05-06T00:00:00.000Z",
+          "dayIndex": 17,
+          "deltaPct": 5,
+          "confidence": 0.667,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "recoil-case",
+          "itemName": "Recoil Case",
+          "action": "buy",
+          "price": 0.255,
+          "executedAt": "2026-05-09T00:00:00.000Z",
+          "dayIndex": 20,
+          "deltaPct": 7.3,
+          "confidence": 0.667,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "revolution-case",
+          "itemName": "Revolution Case",
+          "action": "buy",
+          "price": 0.258,
+          "executedAt": "2026-05-12T00:00:00.000Z",
+          "dayIndex": 23,
+          "deltaPct": 4.3,
+          "confidence": 0.667,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        }
+      ],
+      "issues": [],
+      "runCommand": "node scripts/recording-cli-demo.mjs # visual mock for gemini-2.5-flash"
+    },
+    {
+      "slug": "gemini-2.5-flash-lite",
+      "vendor": "google",
+      "status": "complete",
+      "rankable": true,
+      "generatedAt": "2026-05-19T14:26:04.978Z",
+      "costUsd": 0.003,
+      "totalSpend": 3.0433025467686683,
+      "savingsPct": 0,
+      "efficiencyPct": 0,
+      "decisions": [
+        {
+          "itemId": "dreams-and-nightmares-case",
+          "itemName": "Dreams & Nightmares Case",
+          "action": "buy",
+          "price": 1.179,
+          "executedAt": "2026-04-27T00:00:00.000Z",
+          "dayIndex": 8,
+          "deltaPct": 0,
+          "confidence": 0.62,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fever-case",
+          "itemName": "Fever Case",
+          "action": "buy",
+          "price": 0.58,
+          "executedAt": "2026-04-30T00:00:00.000Z",
+          "dayIndex": 11,
+          "deltaPct": 0,
+          "confidence": 0.62,
+          "rationale": "Recording demo: model buys after baseline comparison and past-only candle context.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "fracture-case",
+          "itemName": "Fracture Case",
+          "action": "skip",
+          "price": null,
+          "executedAt": "2026-05-03T00:00:00.000Z",
+          "dayIndex": 14,
+          "deltaPct": null,
+          "confidence": 0.42,
+          "rationale": "Recording demo: model refuses when evidence quality is insufficient.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "kilowatt-case",
+          "itemName": "Kilowatt Case",
+          "action": "skip",
+          "price": null,
+          "executedAt": "2026-05-06T00:00:00.000Z",
+          "dayIndex": 17,
+          "deltaPct": null,
+          "confidence": 0.42,
+          "rationale": "Recording demo: model refuses when evidence quality is insufficient.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "recoil-case",
+          "itemName": "Recoil Case",
+          "action": "skip",
+          "price": null,
+          "executedAt": "2026-05-09T00:00:00.000Z",
+          "dayIndex": 20,
+          "deltaPct": null,
+          "confidence": 0.42,
+          "rationale": "Recording demo: model refuses when evidence quality is insufficient.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        },
+        {
+          "itemId": "revolution-case",
+          "itemName": "Revolution Case",
+          "action": "skip",
+          "price": null,
+          "executedAt": "2026-05-12T00:00:00.000Z",
+          "dayIndex": 23,
+          "deltaPct": null,
+          "confidence": 0.42,
+          "rationale": "Recording demo: model refuses when evidence quality is insufficient.",
+          "evidence": [
+            "same benchmark candle window",
+            "human market baseline already established",
+            "hindsight price kept as ceiling, not visible decision input"
+          ],
+          "riskFlags": [
+            "provider_issues_visible"
+          ]
+        }
+      ],
+      "issues": [
+        "Recording demo row: evidence-gated hold/skip behavior retained."
+      ],
+      "runCommand": "node scripts/recording-cli-demo.mjs # visual mock for gemini-2.5-flash-lite"
+    },
+    {
+      "slug": "claude-4.5-sonnet",
+      "vendor": "anthropic",
+      "status": "queued",
+      "rankable": false,
+      "generatedAt": null,
+      "costUsd": null,
+      "totalSpend": null,
+      "savingsPct": null,
+      "efficiencyPct": null,
+      "decisions": [],
+      "issues": [],
+      "runCommand": "node scripts/recording-cli-demo.mjs # queued demo row"
+    },
+    {
+      "slug": "gpt-5.2",
+      "vendor": "openai",
+      "status": "queued",
+      "rankable": false,
+      "generatedAt": null,
+      "costUsd": null,
+      "totalSpend": null,
+      "savingsPct": null,
+      "efficiencyPct": null,
+      "decisions": [],
+      "issues": [],
+      "runCommand": "node scripts/recording-cli-demo.mjs # queued demo row"
+    }
+  ],
+  "summary": {
+    "window": {
+      "start": "2026-04-19T00:00:00.000Z",
+      "end": "2026-05-18T00:00:00.000Z"
+    },
+    "humanTotal": 3.0433025467686683,
+    "perfectHindsightTotal": 2.42,
+    "maxSavingsPct": 20.481123292538935,
+    "issueCount": 26,
+    "caveats": [
+      "RECORDING DEMO SNAPSHOT: model matrix values are mocked for video capture; benchmark baselines and item candles come from local artifacts.",
+      "V1 contains no agent strategy. It only establishes data quality and human-market baselines.",
+      "Best and worst historical prices use daily closes to avoid treating provider-level intraday lows as executable consumer prices.",
+      "Best and worst historical prices are hindsight-only and must not be presented as live-buy decisions.",
+      "OHLCV-derived VWAP is a market approximation unless exact trade-level sales are available.",
+      "CS2Cap candle money fields are normalized using the configured price scale from the normalize step.",
+      "This is paper trading only. It does not execute real Steam, marketplace, custody, or account actions.",
+      "The agent sees only prior context candles. The simulator applies decisions to the next available candle.",
+      "Fee percentage is an explicit simulation parameter and defaults to zero for pure timing comparison."
+    ]
+  }
+}

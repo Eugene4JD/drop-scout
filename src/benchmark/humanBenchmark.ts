@@ -10,12 +10,14 @@ export function buildHumanBenchmark(
   normalized: NormalizedMarketData,
   options: BenchmarkOptions
 ): HumanBenchmarkReport {
+  const issuesByItem = groupIssuesByItem(normalized.issues);
   const items = [...new Set(normalized.candles.map((candle) => candle.item))].sort();
   const itemBenchmarks = items.map((item) =>
     benchmarkItem(
       item,
       normalized.candles.filter((candle) => candle.item === item),
-      options
+      options,
+      issuesByItem.get(item) ?? []
     )
   );
 
@@ -30,7 +32,7 @@ export function buildHumanBenchmark(
       currency: "USD",
       candleCount: 0,
       window: normalized.window,
-      issues: [`${issue.code}: ${issue.message}`]
+      issues: issuesByItem.get(issue.item) ?? [`${issue.code}: ${issue.message}`]
     });
   }
 
@@ -75,7 +77,12 @@ export function buildHumanBenchmark(
   };
 }
 
-function benchmarkItem(item: string, candles: MarketCandle[], options: BenchmarkOptions): ItemBenchmark {
+function benchmarkItem(
+  item: string,
+  candles: MarketCandle[],
+  options: BenchmarkOptions,
+  issues: string[]
+): ItemBenchmark {
   const sorted = candles
     .filter((candle) => candle.close > 0 && candle.low > 0 && candle.high > 0)
     .sort((a, b) => a.timestamp.localeCompare(b.timestamp));
@@ -87,12 +94,12 @@ function benchmarkItem(item: string, candles: MarketCandle[], options: Benchmark
       currency: "USD",
       candleCount: 0,
       window: null,
-      issues: ["No valid positive-price candles available."]
+      issues: [...issues, "No valid positive-price candles available."]
     };
   }
 
   const first = sorted[0];
-  const buyNow = {
+  const windowStart = {
     price: first.close,
     timestamp: first.timestamp
   };
@@ -118,7 +125,7 @@ function benchmarkItem(item: string, candles: MarketCandle[], options: Benchmark
       start: sorted[0].timestamp,
       end: sorted[sorted.length - 1].timestamp
     },
-    buyNow,
+    windowStart,
     averageHumanMarket: {
       price: averagePrice,
       method: Number.isFinite(vwap) ? "ohlcv_vwap" : "mean_close",
@@ -128,18 +135,29 @@ function benchmarkItem(item: string, candles: MarketCandle[], options: Benchmark
     },
     bestHistorical: best,
     worstHistorical: worst,
-    volatilityPct: ((worst.price - best.price) / buyNow.price) * 100,
-    timingOpportunityPct: Math.max(0, pctChange(buyNow.price, best.price) * -1),
+    volatilityPct: ((worst.price - best.price) / windowStart.price) * 100,
+    timingOpportunityPct: Math.max(0, pctChange(windowStart.price, best.price) * -1),
     totalVolume,
     averageDailyVolume,
     liquidityTier: liquidityTier(averageDailyVolume),
     budget: {
       budgetUsd: options.budgetUsd,
-      unitsAtBuyNow: Math.floor(options.budgetUsd / buyNow.price),
+      unitsAtWindowStart: Math.floor(options.budgetUsd / windowStart.price),
       unitsAtAverage: Math.floor(options.budgetUsd / averagePrice),
       unitsAtBestHindsight: Math.floor(options.budgetUsd / best.price)
     },
     priceSparkline: sparkline(sorted.map((candle) => candle.close)),
-    volumeSparkline: sparkline(sorted.map((candle) => candle.volume))
+    volumeSparkline: sparkline(sorted.map((candle) => candle.volume)),
+    issues: issues.length > 0 ? issues : undefined
   };
+}
+
+function groupIssuesByItem(issues: NormalizedMarketData["issues"]): Map<string, string[]> {
+  const result = new Map<string, string[]>();
+  for (const issue of issues) {
+    const itemIssues = result.get(issue.item) ?? [];
+    itemIssues.push(`${issue.code}: ${issue.message}`);
+    result.set(issue.item, itemIssues);
+  }
+  return result;
 }

@@ -1,0 +1,64 @@
+$ npm run dev -- benchmark --budget 5
+
+> drop-scout@0.1.0 dev
+> tsx src/cli.ts benchmark --budget 5
+
+
+DropScout human benchmark
+Generated: 2026-05-19T13:44:53.519Z
+Budget: USD 5.00
+
+Item                      Status    Window start  Avg human  Best*     Timing opp  Volume      Liquidity  Price
+------------------------  --------  ------------  ---------  --------  ----------  ----------  ---------  ------------------------
+Dreams & Nightmares Case  complete  USD 1.76      USD 1.18   USD 1.00  43.18%      7,220,056   high       #=#=-~--_---_-..........
+Fever Case                complete  USD 0.74      USD 0.58   USD 0.49  33.78%      10,598,820  high       ##=~----------------.---
+Fracture Case             complete  USD 0.63      USD 0.53   USD 0.44  30.16%      2,601,677   high       *#**==----.---------.---
+Kilowatt Case             complete  USD 0.29      USD 0.21   USD 0.14  51.72%      7,209,555   high       ===#--------.---_----._-
+Recoil Case               complete  USD 0.45      USD 0.28   USD 0.15  66.67%      3,659,098   high       ===#~~______________.___
+Revolution Case           complete  USD 0.38      USD 0.27   USD 0.20  47.37%      6,048,350   high       ###*--------.-----.-_-_-
+
+* Best price is hindsight-only. It is a benchmark, not a live decision.
+
+Data issues:
+- Dreams & Nightmares Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Dreams & Nightmares Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Dreams & Nightmares Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Fever Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Fever Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Fever Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Fracture Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Fracture Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Fracture Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Kilowatt Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Kilowatt Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Kilowatt Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Recoil Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Recoil Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Recoil Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Revolution Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Revolution Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+- Revolution Case: CS2CAP_HTTP_403: CS2Cap returned HTTP 403.
+Wrote reports/human-benchmark.json
+
+$ npm run dev -- report
+
+> drop-scout@0.1.0 dev
+> tsx src/cli.ts report
+
+
+DropScout human benchmark
+Generated: 2026-05-19T13:44:53.519Z
+Budget: USD 5.00
+
+Item                      Status    Window start  Avg human  Best*     Timing opp  Volume      Liquidity  Price
+------------------------  --------  ------------  ---------  --------  ----------  ----------  ---------  ------------------------
+Dreams & Nightmares Case  complete  USD 1.76      USD 1.18   USD 1.00  43.18%      7,220,056   high       #=#=-~--_---_-..........
+Fever Case                complete  USD 0.74      USD 0.58   USD 0.49  33.78%      10,598,820  high       ##=~----------------.---
+Fracture Case             complete  USD 0.63      USD 0.53   USD 0.44  30.16%      2,601,677   high       *#**==----.---------.---
+Kilowatt Case             complete  USD 0.29      USD 0.21   USD 0.14  51.72%      7,209,555   high       ===#--------.---_----._-
+Recoil Case               complete  USD 0.45      USD 0.28   USD 0.15  66.67%      3,659,098   high       ===#~~______________.___
+Revolution Case           complete  USD 0.38      USD 0.27   USD 0.20  47.37%      6,048,350   high       ###*--------.-----.-_-_-
+
+* Best price is hindsight-only. It is a benchmark, not a live decision.
+
+Wrote reports/human-benchmark.md

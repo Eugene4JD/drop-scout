@@ -3,23 +3,26 @@ import type {
   MarketCandle,
   NormalizationIssue,
   NormalizedMarketData,
-  RawArtifact
+  RawArtifact,
+  RawRunManifest
 } from "../types.js";
 import { listJsonFiles, readJson, writeJson } from "../utils/fs.js";
 import { epochToIso } from "../utils/dates.js";
-import { NORMALIZED_CANDLES_PATH, RAW_DIR } from "../paths.js";
+import { LATEST_RAW_RUN_PATH, NORMALIZED_CANDLES_PATH, RAW_DIR } from "../paths.js";
 
 export interface NormalizeOptions {
   priceScale: "minor" | "raw";
+  manifestPath?: string;
+  outputPath?: string;
+  allowAllRaw?: boolean;
 }
 
 export async function normalizeRawData(options: NormalizeOptions): Promise<NormalizedMarketData> {
-  const rawFiles = await listJsonFiles(RAW_DIR);
+  const source = await resolveRawArtifactFiles(options);
+  const rawFiles = source.files;
   const candles: MarketCandle[] = [];
   const issues: NormalizationIssue[] = [];
-  let window: NormalizedMarketData["window"] = null;
-  const successfulCandleItems = new Set<string>();
-  const deferredIssues: NormalizationIssue[] = [];
+  const seenCandles = new Set<string>();
 
   for (const file of rawFiles) {
     const artifact = await readJson<RawArtifact<Cs2CapCandlesPayload>>(file);
@@ -28,7 +31,7 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
     }
 
     if (!artifact.ok) {
-      deferredIssues.push({
+      issues.push({
         item: artifact.item,
         provider: artifact.provider,
         kind: artifact.kind,
@@ -42,14 +45,6 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
       continue;
     }
 
-    window =
-      artifact.request.window ??
-      (artifact.payload?.meta?.start && artifact.payload?.meta?.end
-        ? {
-            start: new Date(artifact.payload.meta.start).toISOString(),
-            end: new Date(artifact.payload.meta.end).toISOString()
-          }
-        : window);
     const payload = artifact.payload;
     if (!Array.isArray(payload?.data) || payload.data.length === 0) {
       issues.push({
@@ -62,7 +57,6 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
       continue;
     }
 
-    successfulCandleItems.add(artifact.item);
     for (const candle of payload.data) {
       if (!isValidCandle(candle)) {
         issues.push({
@@ -75,9 +69,23 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
         continue;
       }
 
+      const timestamp = epochToIso(candle.t);
+      const candleKey = `${artifact.item}:${timestamp}`;
+      if (seenCandles.has(candleKey)) {
+        issues.push({
+          item: artifact.item,
+          provider: "cs2cap",
+          kind: "candles",
+          code: "DUPLICATE_CANDLE_TIMESTAMP",
+          message: `Skipped duplicate candle timestamp ${timestamp} for ${artifact.item}.`
+        });
+        continue;
+      }
+      seenCandles.add(candleKey);
+
       candles.push({
         item: artifact.item,
-        timestamp: epochToIso(candle.t),
+        timestamp,
         open: normalizeMoney(candle.o, options.priceScale),
         high: normalizeMoney(candle.h, options.priceScale),
         low: normalizeMoney(candle.l, options.priceScale),
@@ -97,21 +105,23 @@ export async function normalizeRawData(options: NormalizeOptions): Promise<Norma
     }
   }
 
-  issues.push(
-    ...deferredIssues.filter(
-      (issue) => !(issue.kind === "candles" && successfulCandleItems.has(issue.item))
-    )
-  );
+  candles.sort((a, b) => `${a.item}:${a.timestamp}`.localeCompare(`${b.item}:${b.timestamp}`));
 
   const normalized: NormalizedMarketData = {
     generatedAt: new Date().toISOString(),
-    window,
+    window: deriveWindow(candles),
     priceScale: options.priceScale,
-    candles: candles.sort((a, b) => `${a.item}:${a.timestamp}`.localeCompare(`${b.item}:${b.timestamp}`)),
+    sourceManifest: source.manifest
+      ? {
+          runId: source.manifest.runId,
+          path: source.manifestPath
+        }
+      : undefined,
+    candles,
     issues
   };
 
-  await writeJson(NORMALIZED_CANDLES_PATH, normalized);
+  await writeJson(options.outputPath ?? NORMALIZED_CANDLES_PATH, normalized);
   return normalized;
 }
 
@@ -133,4 +143,49 @@ function isValidCandle(candle: unknown): candle is {
 
   const row = candle as Record<string, unknown>;
   return ["t", "o", "h", "l", "c", "v"].every((key) => Number.isFinite(row[key]));
+}
+
+async function resolveRawArtifactFiles(options: NormalizeOptions): Promise<{
+  files: string[];
+  manifest?: RawRunManifest;
+  manifestPath: string;
+}> {
+  if (options.allowAllRaw) {
+    return {
+      files: (await listJsonFiles(RAW_DIR)).filter((file) => !file.includes("/runs/")),
+      manifestPath: "all-raw"
+    };
+  }
+
+  const manifestPath = options.manifestPath ?? LATEST_RAW_RUN_PATH;
+  let manifest: RawRunManifest;
+  try {
+    manifest = await readJson<RawRunManifest>(manifestPath);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      throw new Error(
+        `No raw run manifest found at ${manifestPath}. Run dropscout fetch first, pass --manifest, or use --all-raw explicitly for legacy artifacts.`
+      );
+    }
+
+    throw error;
+  }
+
+  return {
+    files: manifest.artifacts.map((artifact) => artifact.path),
+    manifest,
+    manifestPath
+  };
+}
+
+function deriveWindow(candles: MarketCandle[]): NormalizedMarketData["window"] {
+  if (candles.length === 0) {
+    return null;
+  }
+
+  const timestamps = candles.map((candle) => candle.timestamp).sort();
+  return {
+    start: timestamps[0],
+    end: timestamps[timestamps.length - 1]
+  };
 }

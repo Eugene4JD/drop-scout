@@ -18,7 +18,7 @@ describe("renderMarkdownReport", () => {
     } satisfies HumanBenchmarkReport);
 
     expect(markdown).toContain("# DropScout Human Benchmark");
-    expect(markdown).toContain("V1 is intentionally only data gathering");
+    expect(markdown).toContain("Human benchmark reports do not contain agent decisions");
     expect(markdown).toContain("## Caveats");
   });
 });

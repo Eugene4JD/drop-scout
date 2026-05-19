@@ -5,7 +5,7 @@ export function renderTerminalReport(report: HumanBenchmarkReport): string {
   const rows = report.items.map((item) => [
     item.item,
     item.status,
-    formatUsd(item.buyNow?.price),
+    formatUsd(item.windowStart?.price),
     formatUsd(item.averageHumanMarket?.price),
     formatUsd(item.bestHistorical?.price),
     formatPct(item.timingOpportunityPct),
@@ -24,7 +24,7 @@ export function renderTerminalReport(report: HumanBenchmarkReport): string {
       [
         "Item",
         "Status",
-        "Buy now",
+        "Window start",
         "Avg human",
         "Best*",
         "Timing opp",

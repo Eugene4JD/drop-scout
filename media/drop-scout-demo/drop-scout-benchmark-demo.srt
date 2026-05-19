@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:08,000
+In the era of AI, confident recommendations are cheap. Benchmarks are how we prove whether a model can actually trade.
+
+2
+00:00:08,000 --> 00:00:17,000
+DropScout turns CS2 market data into a controlled paper-trading exam: fetch, normalize, baseline, model decision, simulated P and L, report.
+
+3
+00:00:17,000 --> 00:00:26,000
+The benchmark first builds the yardstick: 6 cases, 180 candles, and a 66.7% timing ceiling on Recoil Case.
+
+4
+00:00:26,000 --> 00:00:35,000
+Then the model is tested with past-only evidence. This run used gemini-2.5-flash-lite; blocked evidence produced a skip, not a fake trade.
+
+5
+00:00:35,000 --> 00:00:43,000
+What we built is the scoring layer for AI trading agents: same evidence, clear baselines, simulated portfolio value, visible data blockers.
