@@ -2,6 +2,7 @@ node_modules/
 dist/
 apps/web/.next/
 apps/web/.vercel/
+apps/web/out/
 .playwright-mcp/
 *.tsbuildinfo
 outputs/

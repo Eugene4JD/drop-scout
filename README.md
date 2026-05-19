@@ -1,6 +1,8 @@
 # DropScout V1
 
-DropScout V1 is a CLI-only benchmark and Gemini paper-trading harness for CS2 digital-goods market timing.
+DropScout V1 is a benchmark, Gemini paper-trading harness, and static public web viewer for CS2 digital-goods market timing.
+
+Public app: https://eugene4jd.github.io/drop-scout/
 
 The goal of this first version is deliberately narrow:
 
@@ -8,9 +10,9 @@ The goal of this first version is deliberately narrow:
 2. Normalize and cache provider data.
 3. Build human-market benchmark baselines from that data.
 4. Run Gemini model paper-trading decisions against the same candle data.
-5. Generate JSON, Markdown, and terminal reports.
+5. Generate JSON, Markdown, terminal reports, and a static web snapshot.
 
-V1 does not include a web app, X402, OpenRouter, or real market execution. The current agent harness uses the Gemini API through the Vercel AI SDK Google provider and performs paper trading only.
+V1 does not include X402, OpenRouter, or real market execution. The current agent harness uses the Gemini API through the Vercel AI SDK Google provider and performs paper trading only.
 
 ## Items
 

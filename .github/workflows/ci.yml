@@ -20,3 +20,7 @@ jobs:
       - run: npm run build
       - run: npm run package:smoke
       - run: npm audit --omit=dev
+      - run: npm --prefix apps/web ci
+      - run: npm run web:typecheck
+      - run: npm run web:build
+      - run: npm --prefix apps/web audit --omit=dev
